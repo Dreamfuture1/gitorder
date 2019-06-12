@@ -28,6 +28,10 @@ git reset --hard HEAD^	//HEAD^表示前一个版本，HEAD^^/HEAD~2前两个版�
 //记录你的每一次命令//可以查看commit id
 git reflog
 
+//查看commit的具体修改
+git show
+git show commitID
+
 //丢弃工作区的修改//git checkout其实是用版本库里的版本替换工作区的版本
 git checkout -- filename 把filename文件在 工作区 的修改全部撤销
 
@@ -77,11 +81,20 @@ git tag v1.0 <commit id>//给指定的版本添加标签
 使用Git下载v.2.8.1分支代码，使用命令：git clone -b v2.8.1 https://git.oschina.net/oschina/android-app.git
 
 
+//git本地分支合并远程分支
+git remote -v 查看远程仓库
+git fetch origin sql:temp从远程的origin仓库的sql分支下载到本地，并新建一个temp分支
+git diff temp查看本地分支的不同
+git merge temp合并
+git branch -d temp删除分支
 
+首次提交
+git remote add origin git@github.com:michaelliao/learngit.git，关联远程，同时添加origin仓库
+git push -u origin master关联本地分支和远程分支
 
-
-
-
+git pull
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
 
 
 
