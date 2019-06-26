@@ -98,5 +98,13 @@ Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
 
 
 
+//标签管理
+标签依附于具体的最新一次的commit上
+git tag -a <tagname> -m ""//添加标签
+git tag -d <tagname>//删除标签
+git push origin <tagname>//向远程推送标签
+git push origin --tags//向远程推送所有未推送的标签
+
+
 
 
